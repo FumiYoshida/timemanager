@@ -213,7 +213,7 @@ class TimeRange:
     def duration(self):
         """Get the duration of this time range."""
         if self.is_duration_zero:
-            return 0
+            return np.timedelta64(0)
         elif self.is_duration_inf:
             return np.inf
         else:
